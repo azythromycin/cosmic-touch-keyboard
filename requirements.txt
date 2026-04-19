@@ -1,0 +1,14 @@
+# cosmic-touch-keyboard — system packages (not Python).
+# Rust crates are declared in Cargo.toml and installed with: cargo build
+#
+# Debian / Ubuntu / Pop!_OS — install build + optional runtime tools:
+#   sudo apt install $(grep -v '^#' requirements.txt | grep -v '^$' | xargs)
+#
+# Fedora / RHEL — approximate equivalents:
+#   sudo dnf install libxkbcommon-devel pkgconf-pkg-config gcc wtype wl-clipboard
+
+libxkbcommon-dev
+pkg-config
+build-essential
+wtype
+wl-clipboard

@@ -1,0 +1,35 @@
+[package]
+name = "cosmic-touch-keyboard"
+version = "0.1.0"
+edition = "2021"
+authors = ["Satya Neriyanuru"]
+description = "Touchscreen on-screen keyboard for COSMIC DE"
+license = "MPL-2.0"
+
+[[bin]]
+name = "cosmic-touch-keyboard"
+path = "main.rs"
+
+[dependencies]
+# Wayland client + shell
+wayland-client = "0.31"
+wayland-protocols-misc = { version = "0.2", features = ["client"] }
+smithay-client-toolkit = "0.20"
+font8x8 = "0.3"
+fontdue = "0.9"
+
+# Keymap compilation for virtual keyboard
+xkbcommon = { version = "0.8", features = ["wayland"] }
+
+# Keymap transfer
+tempfile = "3"
+
+# Misc
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+anyhow = "1"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

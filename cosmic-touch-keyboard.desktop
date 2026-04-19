@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Touch Keyboard
+Comment=Layer-shell on-screen keyboard for Wayland (touch-first auto-show)
+Exec=cosmic-touch-keyboard
+Icon=input-keyboard
+Terminal=false
+Type=Application
+Categories=Utility;Accessibility;
+Keywords=keyboard;onscreen;touch;osk;virtual;
+StartupNotify=true
+NoDisplay=true
